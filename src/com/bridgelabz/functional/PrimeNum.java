@@ -8,21 +8,7 @@ public class PrimeNum {
 
 				System.out.print("Enter number:-");
 			int n = Utility.getInteger();
-			if(Utility.primeFactors(n))
-				{
-					System.out.println("number is prime");
-				}
-					else {
-						System.out.println("number is not prime");
+		    Utility.primeFactors(n);
+	}}
 					
-					
-				}
-			
-			}
-			
-
-		
-	}
-	
-
 

@@ -4,10 +4,10 @@ import com.bridgelabz.util.Utility;
 
 public class PallindromeNumber {
 
-	public static void main(String[] args) {
+	public static void  main(String[] args) {
 		 int num =Utility.getInteger();
 		System.out.print("enter  the number:-");
-		if(Utility.ispallindrome( num))
+		Utility.ispallindrome(num);
 		{
 			System.out.println("entered String is pallindrom");
 		}
