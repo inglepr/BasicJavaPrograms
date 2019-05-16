@@ -82,6 +82,7 @@ public static Scanner sc=new Scanner(System.in);
 		}
 		
 		//===================PallindromeNumber==================
+		
 		public static void ispallindrome(int num) {
 			int rem,reverseNum=0;
 			int origNum=num;
@@ -94,15 +95,16 @@ public static Scanner sc=new Scanner(System.in);
 				System.out.println("Prime and pallindrime:-  "+reverseNum);
 			}
 		
-	//=================================FlipCoin========================
-	if (Math.random() < 0.5){
+	//===========================FlipCoin===============================
+    if (Math.random() < 0.5){
 		System.out.println("Heads");
 		}
 	else{
 		System.out.println("Tails");}
 		}
-	//==========================HarmonicNumber==========================
-	public static void findHarmonic(int num) {
+	//===========================HarmonicNumber==========================
+
+		public static void findHarmonic(int num) {
 		double res=0.0;
 		while(num!=0) {
 			res=res+(double)1/num;
@@ -111,6 +113,7 @@ public static Scanner sc=new Scanner(System.in);
 		}
 		System.out.println("Output of harmonic series are :"+res);
 	}}
+
 
 
 
