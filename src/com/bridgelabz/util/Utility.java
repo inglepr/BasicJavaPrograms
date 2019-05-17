@@ -112,11 +112,71 @@ public static Scanner sc=new Scanner(System.in);
 			System.out.println(res+" ");
 		}
 		System.out.println("Output of harmonic series are :"+res);
-	}}
+	}
+
+//==================================Number========================================
+public static void findTriplets(int arr[],int n)
+{
+	boolean found=true; 
+	for(int i=0;i<n-2;i++)
+		{
+		for(int j=i+1;j<n-1;j++)
+		{
+			for(int k=j+1;k<n;k++)
+			{
+				if(arr[i]+arr[j]+arr[k]==0)
+				{
+					
+					found=true;
+					System.out.println(arr[1]);
+					System.out.println("");
+					System.out.println(arr[j]);
+					System.out.println("");
+					System.out.println(arr[k]);
+				}
+				
+			}
+			
+		}}
+	if(found==false) {
+		System.out.println("sum is not zero");
+	}
+		
+		}
+
+//==================== Binary search for integer =================================================
+
+public static int binarySearchMethod(String str[],String ele) {
+	int start=0;
+	int end=str.length-1;
+	
+	while(start<=end) {
+		int mid=0;
+		int result=ele.compareToIgnoreCase(str[mid]);
+	 mid=(start+end)/2;
+		if(result>0) {
+			start=mid+1;
+		}
+		else if(result ==0) {
+			System.out.println("element is found at index+mid");
+			break;
+		}
+		else{
+			end=mid-1;
+		}
+		 mid=(start+end)/2;
+	}
+	
+return -1;
+}
+
+public static String binarySearchMethod(String[] str, int size) {
+	// TODO Auto-generated method stub
+	return null;
+}
 
 
-
-
+}
 
 
 
