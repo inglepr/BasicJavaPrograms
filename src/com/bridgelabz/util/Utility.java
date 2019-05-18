@@ -145,42 +145,150 @@ public static void findTriplets(int arr[],int n)
 		}
 
 //==================== Binary search for integer =================================================
-
-public static int binarySearchMethod(String str[],String ele) {
+public static int binarySearchMethod(int arr[],int search) {
 	int start=0;
-	int end=str.length-1;
+	int end=arr.length-1;
 	
 	while(start<=end) {
-		int mid=0;
-		int result=ele.compareToIgnoreCase(str[mid]);
-	 mid=(start+end)/2;
-		if(result>0) {
-			start=mid+1;
+	int mid=(start+end)/2;
+		if(arr[mid]==search) {
+			return mid;
 		}
-		else if(result ==0) {
-			System.out.println("element is found at index+mid");
-			break;
+		else if(arr[mid]<search) {
+			start=mid+1;
 		}
 		else{
 			end=mid-1;
 		}
-		 mid=(start+end)/2;
 	}
-	
 return -1;
 }
 
-public static String binarySearchMethod(String[] str, int size) {
-	// TODO Auto-generated method stub
-	return null;
+//=========================Binary search for String==================================================
+public static int binarySearchMethodString(String str[],String search) {
+	int start=0;
+	int end=str.length-1;
+	  while(start<=end){
+		   int mid=(start+end)/2;
+		   int result=search.compareTo(str[mid]);
+		   	  if(result==0){
+		   		  return mid;
+		       }
+		   	  else if(result>0){
+		   		  start=mid+1;
+		   	  }
+		   	  else{
+		   		  end=mid-1;
+		   	  }		   
+	   }
+return 1;
+}
+
+//==========================Insertion sort for integer ========================================	
+
+public static void insertionSortMethodInt( int arr[])
+{
+    int N = arr.length;
+    int i, j, temp;
+    for (i = 1; i< N; i++) 
+    {
+        j = i;
+        temp = arr[i];    
+        while (j > 0 && temp < arr[j-1])
+        {
+            arr[j] = arr[j-1];
+            j = j-1;
+        }
+        arr[j] = temp;            
+    }        
+}   
+
+	
+
+//==========================Insertion sort for string  ====================================================
+
+public static void insertionSortMethodString( String arr[] )
+{
+    int N = arr.length-1;
+    int i, j; 
+    for (i = 1; i< N; i++) 
+    {
+        j = i;
+      String temp = arr[i];    
+        while (j >= 0 && arr[j-1].compareToIgnoreCase(temp)> 0) 
+        {
+            arr[j] = arr[j-1];
+            j = j-1;
+        }
+        arr[j] = temp;            
+    }        
+}   
+	public static void prinArrayInt(int arr[])
+	{
+		System.out.println("The sorted array is");
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.println(arr[i]);
+		}
+		
+	}
+
+	public static void prinArrayInt(String[] arr) {
+		System.out.println("The sorted array is");
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.println(arr[i]);
+		
+		}}
+	//============================BubbleSortForInteger=============================
+	public static void bubbleSortIntMethod(int arr[])
+	{
+		//int i,j;
+		int temp=arr[1];
+		int n=arr.length;
+		for(int i=1;i<n-1;i++)
+		{
+			for(int j=i+1;j<n-i-1;j++)
+			{
+			if(arr[j]>arr[j+1])
+			
+				
+			temp=arr[j];
+			arr[j]=arr[j+1];
+			arr[j+1]=temp;
+			  
+			
+			}}
+}
+
+	//======================Bubble Sort for String========================
+public static void buubleSortForString(String str[])
+{
+	int n=str.length;
+	
+	for(int i=1;i<n-1;i++)
+	{
+		String temp=str[i];
+		for(int j=i+1;j<n-i-1;j++)
+		{
+			if(str[j].compareTo(str[j+1])>0)
+				temp=str[j];
+			str[j]=str[j+1];
+			str[j+1]=temp;
+			
+		}}}
+		
+		
+
+
+//==========================converts the Fahrenheit temperature into Celsius temperature==============//
+public static double celsius(double f)
+{	
+return  (f-32)*5/9;
 }
 
 
+	
 }
-
-
-
-
-
 
 
