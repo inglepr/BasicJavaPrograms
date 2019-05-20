@@ -262,7 +262,7 @@ public static void insertionSortMethodString( String arr[] )
 }
 
 	//======================Bubble Sort for String========================
-public static void buubleSortForString(String str[])
+public static void bubbleSortForString(String str[])
 {
 	int n=str.length;
 	
@@ -277,18 +277,164 @@ public static void buubleSortForString(String str[])
 			str[j+1]=temp;
 			
 		}}}
-		
-		
+
+//===============================VendingMachin==========================================================//
+public static void countCurrency(int amount) 
+{ 
+    int[] notes = new int[]{ 2000, 500, 200, 100, 50, 20, 10, 5, 1 }; 
+    int[] noteCounter = new int[9]; 
+   
+    // count notes using Greedy approach 
+    for (int i = 0; i < 9; i++) { 
+    	
+        if (amount >= notes[i]) { 
+            noteCounter[i] = amount / notes[i]; 
+            amount = amount - noteCounter[i] * notes[i]; 
+        } 
+    } 
+   
+    // Print notes 
+    System.out.println("Currency Count ->"); 
+    for (int i = 0; i < 9; i++) { 
+        if (noteCounter[i] != 0) { 
+            System.out.println(notes[i] + " : "
+                + noteCounter[i]); 
+        } 
+    } 
+} 
+  
+    
 
 
-//==========================converts the Fahrenheit temperature into Celsius temperature==============//
-public static double celsius(double f)
+//=============================temperaturConversion================
+
+	public static double fahrenheittoCelsius(double f)
+	{	
+	return  (f-32)*5/9;
+	}
+
+
+public static double  celsiustoFahrenheit(double c)
 {	
-return  (f-32)*5/9;
+return  (c*9/5)+32;
 }
 
 
+//=================================monthlyPayments===============================
+public static double monthlypay(double p,double y,double r)
+{
+	double n=12*y;
+	double r0=r/(12*100);
+	double payment=p*r0/(1-(Math.pow((1+r0),(-n))));
+	return payment;
+}
+
+//=====================DayOfWeak===================================================
+public static int getDate(int d0,int m0,int y0){
+	y0=y0-(14-m0)/12;
+	int x=y0+y0/4-y0/100+y0/400;
+	int m=m0+12*((14-m0)/12)-2;
+	d0=(d0+x+(31*m)/12)% 7;
+	return d0;
+}
+
+//===============================Square root ==============================================================
+
+	public static double square(double c) {
+		double t=c;
+		double epsilon=1e-15;
+			while(Math.abs(t-c/t)>epsilon*t) {
+				t=((c/t+t)/2);
+			}
+			return t;
+	}
+
+public static int[] stringToIntArray(String bin) {
+	// TODO Auto-generated method stub
+	return null;
+}
+//========================================DecimalToBinary==================================================
+public static void decToBinary(int n) 
+{ 
+    
+
+	 //array to store binary number 
+	    int[] binaryNum = new int[32]; 
+
+	    // counter for binary array 
+	    int i = 0; 
+	    while (n > 0)  
+	    { 
+	        // storing remainder in binary array 
+	        binaryNum[i] = n % 2; 
+	        n = n / 2; 
+	        i++; 
+	    } 
+ 
+	    // printing binary array in reverse order 
+	    for (int j = i - 1; j >= 0; j--) 
+	        System.out.print(binaryNum[j]); 
+}
+
+ public static void stringToIntArray(int bin) {
+	// TODO Auto-generated method stub
+}
+//========================Swapping nibbles==========================================================
+  public static int swapNibbles(int x) 
+ { 
+     return ((x & 0x0F) << 4 | (x & 0xF0) >> 4); 
+ } 
+  //===========================Primepallindrome=======================================================
+  /*
+   *  Function helping prime() to check if prime is pallindrome and print it
+   */
+   
+  /*public static void primePallindrome() {
+		System.out.println();
+		boolean b;
+		for (int j = 2; j <= 1000; j++) {
+			b = true;
+			for (int i = 2; i < j / 2; i++) {
+				if (j % i == 0) {
+					b = false;
+					break;
+				}
+			}if (b && isPallindrome(j))
+				System.out.print(j + " ");
+			}}
+  
+}*/
+//==========================file read string==================================
+
+	public static String[] fileReadString(String path) throws Exception{
+		FileReader file=new FileReader(path);
+		BufferedReader br=new BufferedReader(file);
+		String line;
+		while(( line=br.readLine())!=null) {
+			String word[]=line.split(",");
+			return word;
+		}
+		br.close();
+		return null;
+	}
 	
-}
-
-
+	
+//============================file read integer==================================
+	
+	public static int[] fileReadInteger(String path) throws Exception{
+		FileReader file=new FileReader(path);
+		BufferedReader br=new BufferedReader(file);
+		String line;
+		while(( line=br.readLine())!=null) {
+			String word[]=line.split(",");
+			int size=word.length;
+			int arr[]=new int[size];
+			for(int i=0;i<arr.length-1;i++) {
+				arr[i]=Integer.parseInt(word[i]);
+			}
+			return arr;
+		}
+		br.close();
+		return null;
+	}	
+}		

@@ -14,7 +14,7 @@ public class BubbleSortForString {
 		str[i]=Utility.getString();
 		
 	}
-	Utility.buubleSortForString(str);
+	Utility.bubbleSortForString(str);
 	Utility.prinArrayInt(str);
 
 	}

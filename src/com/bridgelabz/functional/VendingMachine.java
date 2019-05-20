@@ -27,12 +27,17 @@ public class VendingMachine{
 	      
 	    // driver function  
 	    public static void main(String argc[]){ 
-	        int amount = 868; 
+	        int amount = 500; 
 	        countCurrency(amount); 
-	    } 
+	    }
+
+		//public static void calculate(int money, int[] notes) {
+			// TODO Auto-generated method stub
+			
+		} 
 	      
 	    /* This code is contributed by Sagar Shukla */
-	} 
+	
 
 
 		

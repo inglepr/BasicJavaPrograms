@@ -5,13 +5,13 @@ import com.bridgelabz.util.Utility;
 public class Gamble {
 	public static void main(String[] args) 
 		{	
-			Utility u=new Utility();
+			//Utility u=new Utility();
 			System.out.println("Enter $Stake value: ");
-			int $Stake=u.getInteger();
+			int $Stake=Utility.getInteger();
 			System.out.println("Enter $Goal value: ");
-			int $Goal=u.getInteger();
+			int $Goal=Utility.getInteger();
 			System.out.println("Enter number of times: ");
-			int noOfTimes=u.getInteger();
+			int noOfTimes=Utility.getInteger();
 			
 			int bets = 0;        // total number of bets made
 			int wins = 0;        // total number of games won
