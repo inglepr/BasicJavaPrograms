@@ -15,8 +15,8 @@ public class InsertionSortForString {
 			
 			//System.out.println("enter the element for sort");
 		}
-		Utility.insertionSortMethodString(arr);
-		Utility.prinArrayInt(arr);
+		Utility.insertionSortMethodString(arr,size);
+		Utility. prinArrayInt(arr);
 	}
 	}
 

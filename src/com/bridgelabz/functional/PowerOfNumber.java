@@ -8,7 +8,7 @@ public class PowerOfNumber {
 	       int i=0;
 	       int PowewrOfNum=1;
 	       while(i<=n) {
-	    	   System.out.println(i+" "+PowewrOfNum);
+	    	   System.out.println(i +" "+ PowewrOfNum);
 	    	   PowewrOfNum=PowewrOfNum*2;
 	    	   i++;
 	       }

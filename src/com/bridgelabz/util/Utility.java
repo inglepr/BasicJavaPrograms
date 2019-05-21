@@ -1,9 +1,9 @@
 package com.bridgelabz.util;
 import com.bridgelabz.util.Utility;
 import java.io.BufferedReader;
-import java.io.File;
+//import java.io.File;
 import java.io.FileReader;
-import java.io.Reader;
+//import java.io.Reader;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -38,18 +38,23 @@ public static Scanner sc=new Scanner(System.in);
 		}
 		
 	//===============================PrimeNumber=================================================================
-		public static void primeFactors(int n) {
-			for(int i=2;i<=n;i++){
-				while(n%i==0) {
-					System.out.println(i+"");
-					n=n/i;
+	public static void primeFactors(int num)
+	{
+
+	for(int i=2;i<=num;i++)
+	{
+		if(num%2==0)
+		{
+			System.out.println(i+"");
+			num=num/i;
 		}
-	    }
-		}
+	}
+	}
+	
 		
 	//===============================LeapYear============================//
 
-		public static boolean isleapYear(int year) {
+	public static boolean isleapYear(int year) {
 			if(year%4==0 && year%100!=0){
 				return true;
 			}	 
@@ -61,47 +66,49 @@ public static Scanner sc=new Scanner(System.in);
 	}
 	//==========================Anagram====================================
 
-		public static boolean isAnagram(String s1,String s2) {
-			char[] str1=s1.toCharArray();
-			char[] str2=s2.toCharArray();
+		public static boolean isAnagram (String s1,String s2)
+		{
+			char str1[]=s1.toCharArray();
+			char str2[]=s2.toCharArray();
 			int n1=str1.length;
 			int n2=str2.length;
-			
 			if(n1!=n2) {
 				return false;
-			}			
+			}
 			Arrays.sort(str1);
 			Arrays.sort(str2);
+		for(int i=1;i<n1;i++)
+		{
+			if(str1[i]!=str2[i])
+			return false;
 			
-			for(int i=0;i<n1;i++){
-				if(str1[i]!=str2[i]) { 
-					return false;
-				}	
-			}
-			return true;
 		}
-		
-		//===================PallindromeNumber==================
-		
-		public static void ispallindrome(int num) {
+			return true;
+		}	
+	//===================PallindromeNumber==================//
+		public static void isPallindrom(int num)
+		{
 			int rem,reverseNum=0;
 			int origNum=num;
-				while(num>0){
-					rem=num%10;
-					reverseNum=reverseNum*10+rem;
-					num=num/10;
-				}
-			if(origNum==reverseNum) {
-				System.out.println("Prime and pallindrime:-  "+reverseNum);
+			while(num>0)
+			{
+				rem=num%2;
+				reverseNum=reverseNum*10+rem;
+				num=num/2;
+				
+				
 			}
+			if(origNum==reverseNum)
+				
+//===========================FlipCoin===============================
+   if(Math.random()<0.5)
+   {
+	System.out.println("head");
+	}
+   else {
+		System.out.println("tail");
+   }}
 		
-	//===========================FlipCoin===============================
-    if (Math.random() < 0.5){
-		System.out.println("Heads");
-		}
-	else{
-		System.out.println("Tails");}
-		}
 	//===========================HarmonicNumber==========================
 
 		public static void findHarmonic(int num) {
@@ -112,8 +119,7 @@ public static Scanner sc=new Scanner(System.in);
 			System.out.println(res+" ");
 		}
 		System.out.println("Output of harmonic series are :"+res);
-	}
-
+		}
 //==================================Number========================================
 public static void findTriplets(int arr[],int n)
 {
@@ -128,7 +134,7 @@ public static void findTriplets(int arr[],int n)
 				{
 					
 					found=true;
-					System.out.println(arr[1]);
+					System.out.println(arr[i]);
 					System.out.println("");
 					System.out.println(arr[j]);
 					System.out.println("");
@@ -174,7 +180,7 @@ public static int binarySearchMethodString(String str[],String search) {
 		   	  if(result==0){
 		   		  return mid;
 		       }
-		   	  else if(result>0){
+		   	  else if(result<0){
 		   		  start=mid+1;
 		   	  }
 		   	  else{
@@ -207,9 +213,9 @@ public static void insertionSortMethodInt( int arr[])
 
 //==========================Insertion sort for string  ====================================================
 
-public static void insertionSortMethodString( String arr[] )
+public static void insertionSortMethodString( String arr[],int size )
 {
-    int N = arr.length-1;
+    int N = arr.length;
     int i, j; 
     for (i = 1; i< N; i++) 
     {
@@ -233,19 +239,13 @@ public static void insertionSortMethodString( String arr[] )
 		
 	}
 
-	public static void prinArrayInt(String[] arr) {
-		System.out.println("The sorted array is");
-		for(int i=0;i<arr.length;i++)
-		{
-			System.out.println(arr[i]);
-		
-		}}
+	
 	//============================BubbleSortForInteger=============================
-	public static void bubbleSortIntMethod(int arr[])
+	public static void bubbleSortIntMethod(int arr[],int number)
 	{
 		//int i,j;
 		int temp=arr[1];
-		int n=arr.length;
+		int n=arr.length-1;
 		for(int i=1;i<n-1;i++)
 		{
 			for(int j=i+1;j<n-i-1;j++)
@@ -259,9 +259,13 @@ public static void insertionSortMethodString( String arr[] )
 			  
 			
 			}}
-}
+}//===============================Marge sort=========================================
+  
+		
 
-	//======================Bubble Sort for String========================
+
+//======================Bubble Sort for String========================
+ 
 public static void bubbleSortForString(String str[])
 {
 	int n=str.length;
@@ -278,33 +282,43 @@ public static void bubbleSortForString(String str[])
 			
 		}}}
 
-//===============================VendingMachin==========================================================//
-public static void countCurrency(int amount) 
-{ 
-    int[] notes = new int[]{ 2000, 500, 200, 100, 50, 20, 10, 5, 1 }; 
-    int[] noteCounter = new int[9]; 
-   
-    // count notes using Greedy approach 
-    for (int i = 0; i < 9; i++) { 
-    	
-        if (amount >= notes[i]) { 
-            noteCounter[i] = amount / notes[i]; 
-            amount = amount - noteCounter[i] * notes[i]; 
-        } 
-    } 
-   
-    // Print notes 
-    System.out.println("Currency Count ->"); 
-    for (int i = 0; i < 9; i++) { 
-        if (noteCounter[i] != 0) { 
-            System.out.println(notes[i] + " : "
-                + noteCounter[i]); 
-        } 
-    } 
-} 
-  
-    
 
+	
+
+
+//===============================VendingMachin==========================================================//
+public static  int calculate(int amount ) {
+
+	 int i=0;
+ int total=0;
+
+	//Initialization of New Array
+
+      int[] notes =new int[] { 1000,500,100,50,10,5,2,1};
+      //calling calculate Function
+    int rem;
+     {
+	if(amount==0)
+	{
+		return -1 ;
+	}
+	else
+	{
+		if(amount>=notes[i])
+		{
+			// logic for Calculating The notes
+			int calNotes =amount/notes[i];
+			rem = amount%notes[i];
+			amount =rem;
+			total = total+calNotes;
+			System.out.println(notes[i]+   " Notes ---> " +calNotes );
+		}
+		i++;
+		return 0;
+	} 
+    
+} }
+  
 
 //=============================temperaturConversion================
 
@@ -349,10 +363,7 @@ public static int getDate(int d0,int m0,int y0){
 			return t;
 	}
 
-public static int[] stringToIntArray(String bin) {
-	// TODO Auto-generated method stub
-	return null;
-}
+
 //========================================DecimalToBinary==================================================
 public static void decToBinary(int n) 
 { 
@@ -366,7 +377,7 @@ public static void decToBinary(int n)
 	    while (n > 0)  
 	    { 
 	        // storing remainder in binary array 
-	        binaryNum[i] = n % 2; 
+	        binaryNum[i++] = n % 2; 
 	        n = n / 2; 
 	        i++; 
 	    } 
@@ -376,35 +387,13 @@ public static void decToBinary(int n)
 	        System.out.print(binaryNum[j]); 
 }
 
- public static void stringToIntArray(int bin) {
-	// TODO Auto-generated method stub
-}
-//========================Swapping nibbles==========================================================
+ //=======================================================
   public static int swapNibbles(int x) 
  { 
      return ((x & 0x0F) << 4 | (x & 0xF0) >> 4); 
  } 
-  //===========================Primepallindrome=======================================================
-  /*
-   *  Function helping prime() to check if prime is pallindrome and print it
-   */
-   
-  /*public static void primePallindrome() {
-		System.out.println();
-		boolean b;
-		for (int j = 2; j <= 1000; j++) {
-			b = true;
-			for (int i = 2; i < j / 2; i++) {
-				if (j % i == 0) {
-					b = false;
-					break;
-				}
-			}if (b && isPallindrome(j))
-				System.out.print(j + " ");
-			}}
-  
-}*/
-//==========================file read string==================================
+
+/*//==========================file read string==================================
 
 	public static String[] fileReadString(String path) throws Exception{
 		FileReader file=new FileReader(path);
@@ -436,5 +425,62 @@ public static void decToBinary(int n)
 		}
 		br.close();
 		return null;
+	}*/
+	//==============================Printing String element ==================================
+	public static void printStringArray(String[] str) {
+		System.out.println("String elements are :");
+		for(int i=0;i<str.length;i++){
+	    	System.out.println(str[i]);}
+		
+	}
+	//==============================Printing integer element ==================================
+	public static void printIntArray(int[] arr) {
+		System.out.println("Elements are :");
+		for(int i=0;i<arr.length;i++){
+	    	System.out.println(arr[i]);}
+	}
+
+	
+
+	public static void prinArrayInt(String[] arr) {
+		System.out.println("String elements are :");
+		for(int i=0;i<arr.length;i++){
+	    	System.out.println(arr[i]);}
+	}
+//====================================================
+	void findRoots(int a, int b, int c) 
+    { 
+     // If a is 0, then equation is not      
+     //quadratic, but linear 
+     
+     if (a == 0) 
+     { 
+        System.out.println("Invalid"); 
+        return; 
+     } 
+   
+     int d  = b*b - 4*a*c; 
+     double sqrt_val = Math.abs(d);
+   
+     if (d > 0) 
+     { 
+        System.out.println("Roots are real and different \n"); 
+  
+        System.out.println((double)(-b + sqrt_val) / (2 * a) + "\n" 
+                            + (double)(-b - sqrt_val) / (2 * a)); 
+     } 
+     else // d < 0 
+     { 
+        System.out.println("Roots are complex \n"); 
+  
+        System.out.println( -(double)b / ( 2 * a ) + " + i" 
+                          + sqrt_val + "\n"  + -(double)b / ( 2 * a ) 
+                          + " - i" + sqrt_val); 
+     } 
+    } 
+   
+	
+
+	
 	}	
-}		
+		

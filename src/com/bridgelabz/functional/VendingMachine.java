@@ -1,46 +1,34 @@
 package com.bridgelabz.functional;
-
+import com.bridgelabz.util.Utility;
 
 public class VendingMachine{
-	  public static void countCurrency(int amount) 
-	    { 
-	        int[] notes = new int[]{ 2000, 500, 200, 100, 50, 20, 10, 5, 1 }; 
-	        int[] noteCounter = new int[9]; 
-	       
-	        // count notes using Greedy approach 
-	        for (int i = 0; i < 9; i++) { 
-	            if (amount >= notes[i]) { 
-	                noteCounter[i] = amount / notes[i]; 
-	                amount = amount - noteCounter[i] * notes[i]; 
-	            } 
-	        } 
-	       
-	        // Print notes 
-	        System.out.println("Currency Count ->"); 
-	        for (int i = 0; i < 9; i++) { 
-	            if (noteCounter[i] != 0) { 
-	                System.out.println(notes[i] + " : "
-	                    + noteCounter[i]); 
-	            } 
-	        } 
-	    } 
-	      
-	    // driver function  
-	    public static void main(String argc[]){ 
-	        int amount = 500; 
-	        countCurrency(amount); 
-	    }
-
-		//public static void calculate(int money, int[] notes) {
-			// TODO Auto-generated method stub
-			
-		} 
-	      
-	    /* This code is contributed by Sagar Shukla */
+	public static void main(String args[])
+	{
+		System.out.print("Enter the Amount:");
+	int	amount =Utility.getInteger();
+	vendermachine(amount);
 	
-
-
+		//Utility.calculate(amount);
 		
+	}
+	public static void vendermachine(int amount)
+	{
+		int notes=0;
+		int[] mony= {2000,1000,500,50,10,5,2,1};
+		for(int i=0;i<mony.length-1;i++)
+		{
+			if(amount>=mony[i])
+				
+			{
+				System.out.println(mony[i]+""+amount/mony[i]);
+				notes=notes+amount/mony[i];
+				amount=amount%mony[i];
+				}
+			}
+		System.out.println(notes);
+		
+	}
+}
 	
-
-
+	       
+	      
