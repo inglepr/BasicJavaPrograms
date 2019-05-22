@@ -4,15 +4,13 @@ public class ReplaceString {
 
 	public static void main(String[] args) {
 	String str1,str2,str3,str4;
-	System.out.println("enter the String");
+	System.out.println("Enter String:");
 	str1=Utility.getString();
-	
-	System.out.println("entet you string is"+str1);
-	
-	System.out.println("enter the String you want to replace");
+	System.out.println(str1);
+   System.out.println("Enter name you want to replace");
 	str2=Utility.getString();
 	
-	System.out.println("enter the new String");
+	System.out.println("Enter name you want to replace with");
 	str3=Utility.getString();
 	str4=str1.replace(str2, str3);
 	System.out.println("new String="+str4);

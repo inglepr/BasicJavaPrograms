@@ -10,7 +10,7 @@ public class GuessingNum {
 		while(first<last)
 		{
 			
-			System.out.println("enter you num between"+first+"and"+mid);
+			System.out.println("enter you num between"+first+"and"+mid+"[y/n]");
 			char choice=Utility.getString().charAt(0);
 			if(choice=='y'||choice=='y')
 					 {

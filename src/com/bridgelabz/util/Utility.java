@@ -38,21 +38,20 @@ public static Scanner sc=new Scanner(System.in);
 		}
 		
 	//===============================PrimeNumber=================================================================
-	public static void primeFactors(int num)
+	public static void primeFactors(int num) 
 	{
-
-	for(int i=2;i<=num;i++)
-	{
-		if(num%2==0)
-		{
-			System.out.println(i+"");
-			num=num/i;
-		}
-	}
-	}
+		for(int i=2;i<=num/2;i++)
 	
-		
-	//===============================LeapYear============================//
+		{
+	          if(num%i==0)
+	        	//If isPrime is true then the number is prime else not
+	      		
+	   		   System.out.println(num + " is a Prime Number");
+	   		else
+	   		   System.out.println(num + " is not a Prime Number");
+	   		}
+	}
+//===============================LeapYear============================//
 
 	public static boolean isleapYear(int year) {
 			if(year%4==0 && year%100!=0){
@@ -297,7 +296,7 @@ public static  int calculate(int amount ) {
       int[] notes =new int[] { 1000,500,100,50,10,5,2,1};
       //calling calculate Function
     int rem;
-     {
+     
 	if(amount==0)
 	{
 		return -1 ;
@@ -317,7 +316,7 @@ public static  int calculate(int amount ) {
 		return 0;
 	} 
     
-} }
+} 
   
 
 //=============================temperaturConversion================
@@ -387,10 +386,12 @@ public static void decToBinary(int n)
 	        System.out.print(binaryNum[j]); 
 }
 
+
  //=======================================================
   public static int swapNibbles(int x) 
  { 
      return ((x & 0x0F) << 4 | (x & 0xF0) >> 4); 
+	 
  } 
 
 /*//==========================file read string==================================
@@ -437,6 +438,7 @@ public static void decToBinary(int n)
 	public static void printIntArray(int[] arr) {
 		System.out.println("Elements are :");
 		for(int i=0;i<arr.length;i++){
+			
 	    	System.out.println(arr[i]);}
 	}
 
@@ -478,9 +480,4 @@ public static void decToBinary(int n)
                           + " - i" + sqrt_val); 
      } 
     } 
-   
-	
-
-	
-	}	
-		
+}

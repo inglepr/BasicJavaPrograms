@@ -8,9 +8,9 @@ public class VendingMachine{
 	int	amount =Utility.getInteger();
 	vendermachine(amount);
 	
-		//Utility.calculate(amount);
+	}	//Utility.calculate(amount);
 		
-	}
+	
 	public static void vendermachine(int amount)
 	{
 		int notes=0;
@@ -20,15 +20,20 @@ public class VendingMachine{
 			if(amount>=mony[i])
 				
 			{
-				System.out.println(mony[i]+""+amount/mony[i]);
-				notes=notes+amount/mony[i];
-				amount=amount%mony[i];
+				/*notes=notes+amount/mony[i];
+		        amount=amount%mony[i];
+					System.out.println(mony[i] +"  "+ amount/mony[i]);*/
+				notes=amount/mony[i];
+				int total=amount%mony[i];
+				amount=total;
+				System.out.println(mony[i] +"  "+notes);
+				
 				}
 			}
-		System.out.println(notes);
+		//System.out.println(notes);
 		
 	}
 }
 	
-	       
-	      
+	
+

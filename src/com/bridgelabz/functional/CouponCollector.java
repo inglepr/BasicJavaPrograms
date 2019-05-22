@@ -1,24 +1,26 @@
-package com.bridgelabz.functional;
+	package com.bridgelabz.functional;
 
-import com.bridgelabz.util.Utility;
+	
+	public class CouponCollector{
 
-public class CouponCollector{
+		public static void main(String[] args) {
+        		char[] chars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789".toCharArray();
+				int max=100000000;
+				int random=(int) (Math.random()*max);	
+				StringBuffer sb=new StringBuffer();
+				
+				while (random>0)
+				{
+					sb.append(chars[random % chars.length]);
+					random /= chars.length;
+				}
 
-	public static void main(String[] args) {
-		System.out.println("enter the size of array");
-		int size =Utility.getInteger();
-		int arr[]=new int[size];
-		System.out.println("enter the int  Array for Binary search");
-		for(int i=1;i<arr.length;i++)
-		{
-			arr[i]=Utility.getInteger();
+				String couponCode=sb.toString();
+				System.out.println("Coupon Code: "+couponCode);	
+			}
+				
+			}
 			
-			System.out.println("enter the element for search");
-			int search=Utility.getInteger();
-			Utility.binarySearchMethod(arr, search);
-			
-		}
 		
-	}
+	
 
-}
