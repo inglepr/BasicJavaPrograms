@@ -15,6 +15,7 @@ public class GuessingNum {
 			if(choice=='y'||choice=='y')
 					 {
 				number(first,mid);
+				System.out.println("number found at frist index");
 				 }
 			else if(choice=='n'||choice=='n')
 			{
