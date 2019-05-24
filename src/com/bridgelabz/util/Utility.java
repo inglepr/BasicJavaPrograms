@@ -1,4 +1,3 @@
-
 package com.bridgelabz.util;
 import com.bridgelabz.util.Utility;
 import java.io.BufferedReader;
@@ -208,7 +207,7 @@ public static void insertionSortMethodInt( int arr[])
 
 //==========================Insertion sort for string  ====================================================
 
-public static void insertionSortMethodString(String[] arr, int size) 
+public static void insertionSortMethodString( String arr[] )
 {
     int N = arr.length-1;
     int i, j; 
@@ -242,8 +241,7 @@ public static void insertionSortMethodString(String[] arr, int size)
 		
 		}}
 	//============================BubbleSortForInteger=============================
-	public static void bubbleSortIntMethod(int[] arr, int number) 
-		// TODO Auto-generated method stub
+	public static void bubbleSortIntMethod(int arr[],int num)
 	{
 		//int i,j;
 		int temp=arr[1];
@@ -439,19 +437,21 @@ public static void decToBinary(int n)
 		br.close();
 		return null;
 	}
-	//==============================Print integer element===============================================
+
 	public static void printIntArray(int[] arr) {
-		System.out.println("The sorted array is");
-		for(int i=0;i<arr.length;i++)
-		{
-			System.out.println(arr[i]);
 		
-		}
 		
 	}
 
 	public static void printStringArray(String[] str) {
+		
+		
+	}
+
+	public static void insertionSortMethodString(String[] arr, int size) {
 		// TODO Auto-generated method stub
 		
-	}}
+	}
 
+	
+}		
