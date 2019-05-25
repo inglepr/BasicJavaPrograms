@@ -7,7 +7,7 @@ import com.bridgelabz.util.Utility;
 public class UnOrderedLinkedlist {
 	public static void main(String[] args) throws Exception{
 		String path=("/home/admin1/eclipse-workspace/DataStructureProgram/src/Like.txt");
-		System.out.println("****************8");
+		System.out.println();
 		LinkedList<String> list=new LinkedList<String>();
 		
 		String word[]=Utility.fileReadString(path);
@@ -18,11 +18,11 @@ public class UnOrderedLinkedlist {
 		
 		System.out.println("Enter word to search");
 		String find=Utility.getString();
-		//list.display();
+		list.display();
 		if(list.search(find)) 
 		{
-			System.out.println("word is found in the file***********");
-			System.out.println("Remove the word from file");
+			System.out.println("word is found in the file");
+			//System.out.println("Remove the word from file");
 			list.delete(find);
 			list.display();
 			list.writeOnFile();

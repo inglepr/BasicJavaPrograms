@@ -17,7 +17,11 @@ public static Scanner sc=new Scanner(System.in);
 		public static int getInteger() {
 			return sc.nextInt();
 		}
+		//======================  To get Integer using scanner class  =============================================
 		
+				public static int getClose() {
+					return sc.nextInt();
+				}
 	//======================To get double using scanner class =================================================
 		
 		public static double getDouble() {
@@ -46,6 +50,7 @@ public static Scanner sc=new Scanner(System.in);
 		}
 	    }
 		}
+		
 		
 	//===============================LeapYear============================//
 
@@ -449,9 +454,24 @@ public static void decToBinary(int n)
 	}
 
 	public static void insertionSortMethodString(String[] arr, int size) {
-		// TODO Auto-generated method stub
+	}	// TODO Auto-generated method stub
+	public static void primeFactors(int n [])
+			{
 		
+			}
+
+	public static int[] primeFactors() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
+	public static int[] primeNumber() {
+		// TODO Auto-generated method stub
+		return null;
+	}	
+}
+
 	
-}		
+
+	
+		

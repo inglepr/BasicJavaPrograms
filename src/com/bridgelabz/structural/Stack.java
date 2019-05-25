@@ -1,13 +1,12 @@
 package com.bridgelabz.structural;
 
 //import com.bridgelabz.structural.LinkedList.Node;
-
 public class Stack<T>
 {
 Node Top;
 public class Node
 {
-	T data;
+	T data;   
 	Node next;
 
 }

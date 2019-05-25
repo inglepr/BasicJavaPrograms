@@ -1,5 +1,6 @@
 package com.bridgelabz.structural;
-import com.bridgelabz.util.Utility;
+//import com.bridgelabz.util.Utility;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -17,12 +18,15 @@ public class LinkedList<T>{
 	public void add(T data) {
 		Node node=new Node();
 		node.data=data;
-			if(head==null) {
-				head=node;
+			if(head==null)//list don't hava any element
+			{
+				head=node;//it meant list don't have any node and head is first node
 			}
 			else {
-			Node n=head;
-				while(n.next!=null) {
+			Node n=head;// in a trav use temp node that is n here and head put in head
+				while(n.next!=null) //if list have some note then insert new node using n 
+					                //temp node travel to another node null=null;
+				{
 					n=n.next;
 				}
 			n.next=node;
@@ -49,7 +53,7 @@ public class LinkedList<T>{
 					return true;
 				}
 				if(n.next==null){
-					n.data.equals(word);
+					n.data.equals(word);//add new word to link list
 					return true;
 				}
 				n=n.next;
@@ -67,7 +71,7 @@ public class LinkedList<T>{
 			}
 			while(n!=null){
 				if(n.data.equals(ele)) {
-					n1.next=n.next;
+					//n1.next=n.next;
 				}
 				n1=n;
 				n=n.next;
@@ -112,7 +116,7 @@ public class LinkedList<T>{
 		return false;
 	}
 	
-	public T last(T data) {
+/*	public T last(T data) {
 		Node n=new Node();
 		n.data=data;
 		if(head==null) {
@@ -128,8 +132,8 @@ public class LinkedList<T>{
 			}
 			last.next=n;
 		}
-		return data;
-	}
+		return data;*/
+	
 	public void writeOnFile() {
 		String first="";
 		Node temp=head;

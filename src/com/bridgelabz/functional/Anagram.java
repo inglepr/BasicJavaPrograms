@@ -18,6 +18,19 @@ public class Anagram {
 			System.out.println("entered string is not anagram");
 		
 }
-		}}
+		}
+
+	public static int[] Prime(int number) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static int[] Anagram(int[] array) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	}
 
 

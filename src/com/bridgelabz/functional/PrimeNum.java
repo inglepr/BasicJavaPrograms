@@ -9,6 +9,10 @@ public class PrimeNum {
 				System.out.print("Enter number:-");
 			int num = Utility.getInteger();
 		    Utility.primeFactors(num);
+
+		
+		    
 	}}
+
 					
 
