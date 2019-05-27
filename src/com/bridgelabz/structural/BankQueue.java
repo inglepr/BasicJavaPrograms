@@ -21,7 +21,8 @@ public class BankQueue {
 			Scanner sc1=new  Scanner(System.in);
 			System.out.println("Enter customer name ");
 			s=sc1.next();
-			BankQueue.enqueue(s);
+			String item=Utility.getString();
+			BankQueue.enqueue(item);
 		
 		case 2:
 			Scanner sc2=new  Scanner(System.in);

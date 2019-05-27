@@ -48,9 +48,8 @@ public class Dqueue<T> {
 		}
 		else {
 			if(isempty()) {
-				front++;
-				rear++;
-				input[rear]=temp;	
+				input[front]=temp;
+				rear++;;	
 			}
 			else {
 				rear++;

@@ -10,7 +10,7 @@ public class Queue {
 	static int front;
 	static int rear;
 	static int count;
-	static int amount=1000;
+	static int amount=100;
 	
 	Queue(int size){
 		arr=new String[size];
@@ -20,7 +20,7 @@ public class Queue {
 		count=0;
 	}
 	public static int size() {
-		return count;
+		return total;
 	}
 	/*
 	 * purpose to display 
@@ -83,7 +83,7 @@ public class Queue {
 	 */
 	public static void dequeue() {
 		if(isempty()) {
-			System.out.println("Amount in the bank: "+amount);
+			System.out.println("Amount in the bank: "+ amount);
 		}
 		System.out.println("Removing amount from account " +arr[front]);
 		front=(front+1)%total;
@@ -108,7 +108,7 @@ public class Queue {
 			money=Utility.getInteger();
 			credit(money);
 			System.out.println(peek()+" add amount in your account");
-			System.out.println("Amount is added "+amount);
+			System.out.println("Amount is added "+ amount);
 			break;
 		case 2:
 			System.out.println("Enter withdrawl amount");

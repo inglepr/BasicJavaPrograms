@@ -1,6 +1,6 @@
 package com.bridgelabz.structural;
 
-//import com.bridgelabz.structural.LinkedList.Node;
+import com.bridgelabz.structural.LinkedList.Node;
 public class Stack<T>
 {
 Node Top;
@@ -8,11 +8,14 @@ public class Node
 {
 	T data;   
 	Node next;
+	}
 
+	
+
+public Stack(int n) {
+	// TODO Auto-generated constructor stub
 }
-/*
- * add element
- */
+//add element
 public void  push(T ch) {
 	Node node=new Node();
 	node.data=ch;
@@ -32,6 +35,7 @@ public void  push(T ch) {
 			}
 		 n=n.next;
 	 }
+	
 	 /*
 	  * check stack is empty or not
 	  */
@@ -45,12 +49,13 @@ public void  push(T ch) {
  /*
   *delete data from stack 
   */
- public void pop()
+ public int pop()
  {
 	 if(Top==null) {
 		System.out.println("");
 		System.exit(0);
 		}
 	Top= Top.next;
+	return 0;
 		 }
 	}

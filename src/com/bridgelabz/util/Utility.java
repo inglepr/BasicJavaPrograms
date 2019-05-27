@@ -42,7 +42,7 @@ public static Scanner sc=new Scanner(System.in);
 		}
 		
 	//===============================PrimeNumber=================================================================
-		public static void primeFactors(int n) {
+		public static  void primeFactors(int n) {
 			for(int i=2;i<=n;i++){
 				while(n%i==0) {
 					System.out.println(i+"");
