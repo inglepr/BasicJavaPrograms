@@ -1,5 +1,7 @@
 package com.bridgelabz.structural;
-
+/*
+ * using link list
+ */
 import com.bridgelabz.util.Utility;
 
 public class calendarLinkList {
@@ -17,8 +19,8 @@ public class calendarLinkList {
 		if(month==2 && Utility.isleapYear(year)) {
 			date[month]=29;
 		}
-		int day=Utility.getDate(month,1,year);
-		int arr[][]=new int[6][7];
+		int day=Utility.getDate(month,1,year);//getDate Utility
+		int arr[][]=new int[12][7];
 		int x=1;
 		
 		for(int i=0;i<6;i++) {

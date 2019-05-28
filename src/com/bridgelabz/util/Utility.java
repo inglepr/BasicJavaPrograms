@@ -468,6 +468,11 @@ public static void decToBinary(int n)
 	public static int[] primeNumber() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public static int[] primeAnagram(int i) {
+		// TODO Auto-generated method stub
+		return null;
 	}	
 }
 

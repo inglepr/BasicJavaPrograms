@@ -48,22 +48,20 @@ public class Dqueue<T> {
 		}
 		else {
 			if(isempty()) {
-				input[front]=temp;
-				rear++;;	
-			}
-			else {
 				rear++;
 				input[rear]=temp;
-				}
+			
+				front++;
 			}
-		return null;
+			
+		}		return null;
 	}
 	/*
 	 * Purpose to remove element from rear end
 	 */
 	public String removerear() {
 		if(isFull()) {
-			return "Dequeue is empty";
+			return "Dequeue is  not empty";
 		}
 		else {
 			String rearElement=input[rear];

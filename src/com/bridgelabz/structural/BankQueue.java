@@ -1,10 +1,12 @@
 package com.bridgelabz.structural;
-import com.bridgelabz.structural.Queue;
+import com.bridgelabz.structural.Queue ;
 import com.bridgelabz.util.Utility;
 import java.util.Scanner;
 public class BankQueue {
 
 
+
+	private String count;
 
 	public static void main(String[] args) {
 		Scanner sc=new  Scanner(System.in);
@@ -22,23 +24,27 @@ public class BankQueue {
 			System.out.println("Enter customer name ");
 			s=sc1.next();
 			String item=Utility.getString();
-			BankQueue.enqueue(item);
+			bank.enqueue(item);
 		
 		case 2:
 			Scanner sc2=new  Scanner(System.in);
 			System.out.println("Account holder name "+Queue.peek());
 			System.out.println("Enter 1 to add and 2 to withdraw ");
 			int m=sc2.nextInt();
-			Queue.transaction(m);
+			bank.transaction(m);
 			Queue.dequeue();
 			System.out.println("Account holder name "+Queue.peek());
-		
+	
 		case 3:
-			System.out.println("size "+Queue.count);
-			Queue.display();
+			System.out.println("size "+bank.count);
+		Queue.display();
 		}
 		while(num>0 && num<3) 
 			sc.close();//for closing the scanner	
+	}
+private void transaction(int m) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	private static void enqueue(String s) {

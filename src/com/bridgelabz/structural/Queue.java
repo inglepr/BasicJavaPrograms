@@ -4,15 +4,16 @@ package com.bridgelabz.structural;
  *  Queue for Bankcash
  */
 import com.bridgelabz.util.Utility;
-public class Queue {
+public class Queue <T> {
 	static String arr[];
 	static int total;
 	static int front;
 	static int rear;
 	static int count;
-	static int amount=100;
+	public static int amount=100;
 	
-	Queue(int size){
+	
+public  Queue (int size){
 		arr=new String[size];
 		front=0;
 		rear=-1;
