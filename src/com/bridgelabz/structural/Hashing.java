@@ -18,7 +18,7 @@ public class Hashing {
 		int num = 0;
 		int j=0;
 		String str=br.readLine();
-		//System.out.println(str);
+		System.out.println(str);
 		String strArray[]=str.split(",");
 		for(int i=0;i<strArray.length;i++)
 {
