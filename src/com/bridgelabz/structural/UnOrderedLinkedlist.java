@@ -14,8 +14,10 @@ public class UnOrderedLinkedlist
 			LinkedList<String> list=new LinkedList<String>();
 			
 			String word[]=Utility.fileReadString(path);
+	
+
 			for(int i=0;i<word.length;i++) {
-				list.add(word[i]);
+				list.insert(word[i]);
 			}
 			list.display();
 			
@@ -37,7 +39,7 @@ public class UnOrderedLinkedlist
 				System.out.println("word is not found in the file");
 				System.out.println("adding word to file");
 				System.out.println("");
-				list.add(find);
+				list.insert(find);
 				list.display();
 				//list.writeOnFile();
 			}

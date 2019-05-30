@@ -86,7 +86,7 @@ public  Queue (int size){
 		if(isempty()) {
 			System.out.println("Amount in the bank: "+ amount);
 		}
-		System.out.println("Removing amount from account " +arr[front]);
+	//	System.out.println("Removing amount from account " +arr[front]);
 		front=(front+1)%total;
 		count--;
 	}

@@ -13,8 +13,8 @@ public class PrimeAnagram {
 		int k=1;
 		int m=0;
 		int array[]=new int[168];
-		array=Anagram.Prime(number);
-		int anagram[]=Anagram.Anagram(array);
+		array=Anagram.Prime(number);//Compared prime is anagram num 
+		int anagram[]=Anagram.Anagram(array);//compare anagram with anagram
 		int array2[][]=new int[10][20];
 		for(int l=0;l<10;l++){
 			for(int j=0;j<17;j++){

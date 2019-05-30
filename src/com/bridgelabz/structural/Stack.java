@@ -23,7 +23,7 @@ public void  push(T ch) {
 /*
  * peek element
  */
- public T peek(T ch) {
+/* public T peek(T ch) {
 	 if(Top==null) {
 		 System.out.println("stack is empty");}
 	 else {
@@ -40,8 +40,20 @@ public void  push(T ch) {
 	
 	 /*
 	  * check stack is empty or not
-	  */
+	  
 	}
+*/
+public  T peek() {
+	Node Top;
+	Node node=new Node();
+	Node head = null;
+	if(head==null)
+	{
+		System.out.println("No element Found");
+		return null;
+	}
+	return (T)head.data;
+}
  public boolean isempty() {
 	 if(Top==null)
 		 return false;
@@ -64,4 +76,4 @@ public void display() {
 	
 	
 }
-	}
+}

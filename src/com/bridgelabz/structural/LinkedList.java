@@ -18,7 +18,7 @@ public class LinkedList<T>{
 	/*
 	 * Purpose to add element to list 
 	 */
-	public void add(T data) {
+	public void insert(T data) {
 		Node node=new Node();
 		node.data=data;
 			if(head==null) {
@@ -61,14 +61,14 @@ public class LinkedList<T>{
 	 * Purpose to display element from list
 	 */
 	public void display(){
-		Node n=head;
-			while(n.next!=null) {
-				n=n.next;
-				System.out.println(n.data+"");
+		Node node=head;
+			while(node.next!=null) {
 			
-			}
-			System.out.println(n.data);	
-	}
+				System.out.println(node.data+"");
+				node=node.next;
+				}
+		System.out.println(node.data);	
+}
 	/*
 	 * Purpose to search element from list
 	 */

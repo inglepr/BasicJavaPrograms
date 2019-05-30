@@ -23,7 +23,7 @@ public class Hashing {
 		for(int i=0;i<strArray.length;i++)
 {
 			int num1=Hash(strArray[i]);
-			slot[num1].add(strArray[i]);
+			slot[num1].insert(strArray[i]);
 			
 		}
 		//System.out.println(" number "+num);
